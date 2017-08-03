@@ -3,7 +3,6 @@
  */
 
 import express from 'express';
-import bodyParser from 'body-parser';
 import gate from './gate';
 
 /**
@@ -11,14 +10,6 @@ import gate from './gate';
  */
 
 const router = express.Router();
-const app = express();
-
-/**
- * Middlewares
- */
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 /**
  * Routes
@@ -26,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //  User
 router.post('/v1/user', gate.register);
+router.post('/v1/user/login', gate.login);
 
 /**
  * Interface

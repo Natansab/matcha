@@ -10,20 +10,24 @@ import mongoose from '../lib/mongoose';
  */
 
 const Schema = mongoose.Schema;
+const gender = 'male female trans'.split(' ');
+const orientation = 'straight homo bi'.split(' ');
 
 /**
  * Schema
  */
 
 const UserSchema = new Schema({
+  username: { type: String, required: true },
   firstname: { type: String, required: true },
   lastname: { type: String, required: true },
   password: { type: String, required: true },
+  email: { type: mongooseTypeEmail, required: true },
+  token: String,
   bio: String,
   interest: Array,
-  email: { type: mongooseTypeEmail, required: true },
-  // gender: { type: String, match: /^m$|^w$|^t$/ },
-  // orientation: { type: String, match: /^hetero$|^homo$|^bi$/, default: 'bisexual' },
+  gender: { type: String, enum: gender },
+  orientation: { type: String, enum: orientation, default: 'bi' },
 },
 );
 
