@@ -2,17 +2,38 @@
  * Models
  */
 
+import crypto from 'crypto';
 import UserModel from '../../schemas/user';
+
+/**
+ * Private
+ */
+
+function encryptPassword(password) {
+  return crypto.createHash('sha256').update(`${password}matcha`).digest('hex');
+}
 
 /**
  * Public
  */
 
-async function register({ firstname, lastname, email, password }) {
-  let userDoc = await UserModel.findOne({ email });
-  if (userDoc) throw new Error('User already exists');
+async function register({ username, firstname, lastname, email, password }) {
+  let userDoc = await UserModel.findOne({
+    $or: [
+     { email },
+     { username },
+    ],
+  });
 
-  userDoc = new UserModel({ firstname, lastname, email, password });
+  if (userDoc && userDoc.email && email === userDoc.email) throw new Error('E-mail already linked to account');
+  if (userDoc && userDoc.username && username === userDoc.username) throw new Error('Username not available');
+
+  const hash = encryptPassword(password);
+
+  userDoc = new UserModel({ username, firstname, lastname, email, password: hash });
+
+  const token = crypto.createHash('sha256').update(`${userDoc.email}${Date.now()}`).digest('hex');
+  Object.assign(userDoc, { token });
 
   return userDoc.save();
 }

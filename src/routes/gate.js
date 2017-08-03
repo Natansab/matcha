@@ -2,8 +2,8 @@
  * Dependencies
  */
 
-// import { sendOK } from '../lib/response';
 import userController from '../controllers/gate/user';
+import authController from '../controllers/gate/auth';
 
 /**
  * Public
@@ -11,8 +11,8 @@ import userController from '../controllers/gate/user';
 
 async function register(req, res, next) {
   try {
-    const { firstname, lastname, email, password } = req.body;
-    const userDoc = await userController.register({ firstname, lastname, email, password });
+    const { username, firstname, lastname, email, password } = req.body;
+    const userDoc = await userController.register({ username, firstname, lastname, email, password });
 
     return res.json({ code: 200, userDoc });
   } catch (e) {
@@ -20,10 +20,21 @@ async function register(req, res, next) {
   }
 }
 
+async function login(req, res, next) {
+  try {
+    const { email, password } = req.body;
+    const connected = await authController.login({ email, password });
+
+    return res.json({ code: 200, connected });
+  } catch (e) {
+    return next(e);
+  }
+}
 /**
  * Interface
  */
 
 export default {
   register,
+  login,
 };
