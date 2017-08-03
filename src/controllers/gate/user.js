@@ -4,14 +4,7 @@
 
 import crypto from 'crypto';
 import UserModel from '../../schemas/user';
-
-/**
- * Private
- */
-
-function encryptPassword(password) {
-  return crypto.createHash('sha256').update(`${password}matcha`).digest('hex');
-}
+import { encryptPassword } from './auth';
 
 /**
  * Public

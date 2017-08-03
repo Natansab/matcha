@@ -23,9 +23,9 @@ async function register(req, res, next) {
 async function login(req, res, next) {
   try {
     const { email, password } = req.body;
-    const connected = await authController.login({ email, password });
+    const userDoc = await authController.login({ email, password });
 
-    return res.json({ code: 200, connected });
+    return res.json({ code: 200, userDoc });
   } catch (e) {
     return next(e);
   }

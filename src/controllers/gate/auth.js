@@ -12,12 +12,6 @@ import crypto from 'crypto';
 import UserModel from '../../schemas/user';
 
 /**
- * Errors
- */
-
-// const LoginError = error.build('LoginError');
-
-/**
  * Public
  */
 
@@ -29,9 +23,9 @@ function login({ email, password }) {
   const hash = encryptPassword(password);
   const userDoc = UserModel.findOne({ email, password: hash });
 
-  if (!!userDoc) throw new Error('Email or password incorrect');
+  if (!userDoc) throw new Error('Email or password incorrect');
 
-  return ('Ok');
+  return userDoc;
 }
 
 /**
