@@ -1,0 +1,47 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Ethan Sebban",
+  "license": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "version": "./deploy/build.sh",
+    "rollback": "git reset && git checkout . && git clean -f",
+    "postversion": "git push --follow-tags",
+    "lint": "eslint .",
+    "clean": "rm -rf dist",
+    "compile": "cp -rf src dist && babel -d dist src",
+    "build": "npm run clean && npm run compile",
+    "start": "babel-node src/index.js | bunyan",
+    "debug": "DEBUG=* npm start"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.13.2",
+    "algoliasearch": "^3.24.1",
+    "babel-polyfill": "^6.23.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "bunyan": "^1.8.10",
+    "camelcase": "^4.1.0",
+    "debug": "^2.6.8",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.3",
+    "mongoose-type-email": "^1.0.5",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
