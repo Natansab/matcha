@@ -45,6 +45,15 @@ async function get(userId) {
   return userDoc;
 }
 
+async function complete({ userId, gender, orientation, bio, interests, pictures }) {
+  const userDoc = await UserModel.findById(userId, '-password -token');
+
+  if (!userDoc) throw new Error(`User id ${userId} incorrect`);
+
+  Object.assign(userDoc, { gender, orientation, bio, interests, pictures });
+  return userDoc.save();
+}
+
 /**
   * Interface
   */
@@ -52,4 +61,5 @@ async function get(userId) {
 export default {
   register,
   get,
+  complete,
 };

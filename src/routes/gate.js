@@ -25,8 +25,8 @@ async function register(req, res, next) {
 
 async function login(req, res, next) {
   try {
-    const { email, password } = req.body;
-    const userDoc = await authController.login({ email, password });
+    const { username, password } = req.body;
+    const userDoc = await authController.login({ username, password });
 
     const user = userDoc.toObject();
     delete user.password;
@@ -61,6 +61,21 @@ async function getUser(req, res, next) {
     return next(e);
   }
 }
+
+async function completeProfile(req, res, next) {
+  try {
+    const { userId, gender, orientation, bio, interests, pictures } = { ...req.params, ...req.body };
+
+    const userDoc = await userController.complete({
+      userId, gender, orientation, bio,
+      interests, pictures,
+    });
+
+    return sendOK(res, userDoc);
+  } catch (e) {
+    return next(e);
+  }
+}
 /**
  * Interface
  */
@@ -70,4 +85,5 @@ export default {
   login,
   checkpoint,
   getUser,
+  completeProfile,
 };
