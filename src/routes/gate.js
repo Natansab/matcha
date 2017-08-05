@@ -2,7 +2,6 @@
  * Dependencies
  */
 
-import util from 'util';
 import lo from 'lodash';
 import userController from '../controllers/gate/user';
 import authController from '../controllers/gate/auth';
