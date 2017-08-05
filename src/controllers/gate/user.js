@@ -3,6 +3,7 @@
  */
 
 import crypto from 'crypto';
+import lo from 'lodash';
 import UserModel from '../../schemas/user';
 import { encryptPassword } from './auth';
 
@@ -18,8 +19,8 @@ async function register({ username, firstname, lastname, email, password }) {
     ],
   });
 
-  if (userDoc && userDoc.email && email === userDoc.email) throw new Error('E-mail already linked to account');
-  if (userDoc && userDoc.username && username === userDoc.username) throw new Error('Username not available');
+  if (lo.get(userDoc, 'email') === email) throw new Error('E-mail already linked to account');
+  if (lo.get(userDoc, 'username') === username) throw new Error('Username not available');
 
   const hash = encryptPassword(password);
 
