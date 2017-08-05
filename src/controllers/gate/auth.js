@@ -27,18 +27,19 @@ function encryptPassword(password) {
   return crypto.createHash('sha256').update(`${password}matcha`).digest('hex');
 }
 
-function login({ email, password }) {
+async function login({ email, password }) {
   const hash = encryptPassword(password);
   const userDoc = UserModel.findOne({ email, password: hash });
 
   if (!userDoc) throw new Error('Email or password incorrect');
 
-  userDoc.token = generateToken(userDoc.email);
+  if (!userDoc.token) {
+    const token = generateToken(userDoc.email);
+    Object.assign(userDoc, { token });
+    await userDoc.save();
+  }
 
-  const user = userDoc;
-  delete user.password;
-
-  return user;
+  return userDoc;
 }
 
 /**
