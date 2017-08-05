@@ -2,6 +2,8 @@
  * Dependencies
  */
 
+import util from 'util';
+import lo from 'lodash';
 import userController from '../controllers/gate/user';
 import authController from '../controllers/gate/auth';
 import { sendOK } from '../lib/response';
@@ -20,7 +22,7 @@ async function register(req, res, next) {
       { param: 'username', required: true },
       { param: 'firstname', required: true },
       { param: 'lastname', required: true },
-      { param: 'email', required: true },
+      { param: 'email', required: true, transform: str => str.toLowerCase() },
       { param: 'password', required: true },
     ]);
 
@@ -88,13 +90,15 @@ async function completeProfile(req, res, next) {
       userId, gender, orientation,
       bio, interests, pictures,
     } = validate({ ...req.params, ...req.body }, [
-      { param: 'id', name: 'user_id', requires: true },
-      { param: 'gender', requires: true },
-      { param: 'orientation', requires: true },
-      { param: 'bio', requires: true },
-      { param: 'interests', requires: true },
-      { param: 'pictures', requires: true },
+      { param: 'id', name: 'user_id', required: true },
+      { param: 'gender', required: true },
+      { param: 'orientation', required: true },
+      { param: 'bio', required: true },
+      { param: 'interests', required: true },
+      { param: 'pictures', required: true },
     ]);
+
+    if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
 
     const userDoc = await userController.complete({
       userId, gender, orientation, bio,

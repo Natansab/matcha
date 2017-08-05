@@ -47,7 +47,7 @@ async function check(token) {
 
   if (!userDoc) throw new Error(`Incorrect token ${token}`);
 
-  return userDoc._id;
+  return userDoc._id.toString();
 }
 /**
  * Interface

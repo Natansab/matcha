@@ -2,7 +2,7 @@
  * Dependencies
  */
 
-import mongooseTypeEmail from 'mongoose-type-email';
+import 'mongoose-type-email';
 import mongoose from '../lib/mongoose';
 
 /**
@@ -22,12 +22,13 @@ const UserSchema = new Schema({
   firstname: { type: String, required: true },
   lastname: { type: String, required: true },
   password: { type: String, required: true },
-  email: { type: mongooseTypeEmail, required: true },
+  email: { type: mongoose.SchemaTypes.Email, required: true },
   token: String,
   bio: String,
   interest: Array,
   gender: { type: String, enum: gender },
   orientation: { type: String, enum: orientation, default: 'bi' },
+  score: Number,
 },
 );
 
