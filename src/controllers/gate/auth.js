@@ -12,6 +12,14 @@ import crypto from 'crypto';
 import UserModel from '../../schemas/user';
 
 /**
+ * Private
+ */
+
+function generateToken(salt) {
+  return crypto.createHash('sha256').update(`${salt}${Date.now()}`).digest('hex');
+}
+
+/**
  * Public
  */
 
@@ -25,7 +33,12 @@ function login({ email, password }) {
 
   if (!userDoc) throw new Error('Email or password incorrect');
 
-  return userDoc;
+  userDoc.token = generateToken(userDoc.email);
+
+  const user = userDoc;
+  delete user.password;
+
+  return user;
 }
 
 /**

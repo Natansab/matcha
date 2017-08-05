@@ -13,8 +13,8 @@ import { encryptPassword } from './auth';
 async function register({ username, firstname, lastname, email, password }) {
   let userDoc = await UserModel.findOne({
     $or: [
-     { email },
-     { username },
+      { email },
+      { username },
     ],
   });
 
@@ -28,7 +28,12 @@ async function register({ username, firstname, lastname, email, password }) {
   const token = crypto.createHash('sha256').update(`${userDoc.email}${Date.now()}`).digest('hex');
   Object.assign(userDoc, { token });
 
-  return userDoc.save();
+  userDoc.save();
+
+  const user = userDoc;
+  delete user.password;
+
+  return user;
 }
 
 /**
