@@ -29,7 +29,7 @@ function encryptPassword(password) {
 
 async function login({ email, password }) {
   const hash = encryptPassword(password);
-  const userDoc = UserModel.findOne({ email, password: hash });
+  const userDoc = await UserModel.findOne({ email, password: hash });
 
   if (!userDoc) throw new Error('Email or password incorrect');
 
@@ -42,6 +42,13 @@ async function login({ email, password }) {
   return userDoc;
 }
 
+async function check(token) {
+  const userDoc = await UserModel.findOne({ token }, '_id');
+
+  if (!userDoc) throw new Error(`Incorrect token ${token}`);
+
+  return userDoc._id;
+}
 /**
  * Interface
  */
@@ -49,4 +56,5 @@ async function login({ email, password }) {
 export default {
   encryptPassword,
   login,
+  check,
 };

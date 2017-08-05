@@ -35,6 +35,21 @@ async function login(req, res, next) {
   }
 }
 
+async function checkpoint(req, res, next) {
+  try {
+    const token = req.headers.token;
+
+    const userId = await authController.check(token);
+    Object.assign(req, {
+      auth: { userId, logged: true },
+    });
+
+    return next();
+  } catch (e) {
+    return next(e);
+  }
+}
+
 async function getUser(req, res, next) {
   try {
     const userId = req.params.id;
@@ -52,5 +67,6 @@ async function getUser(req, res, next) {
 export default {
   register,
   login,
+  checkpoint,
   getUser,
 };
