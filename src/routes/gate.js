@@ -14,6 +14,8 @@ async function register(req, res, next) {
     const { username, firstname, lastname, email, password } = req.body;
     const userDoc = await userController.register({ username, firstname, lastname, email, password });
 
+    const user = userDoc.toObject();
+    delete user.password;
     return res.json({ code: 200, userDoc });
   } catch (e) {
     return next(e);
@@ -25,7 +27,9 @@ async function login(req, res, next) {
     const { email, password } = req.body;
     const userDoc = await authController.login({ email, password });
 
-    return res.json({ code: 200, userDoc });
+    const user = userDoc.toObject();
+    delete user.password;
+    return res.json({ code: 200, user });
   } catch (e) {
     return next(e);
   }
