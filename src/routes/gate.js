@@ -4,6 +4,7 @@
 
 import userController from '../controllers/gate/user';
 import authController from '../controllers/gate/auth';
+import { sendOK } from '../lib/response';
 
 /**
  * Public
@@ -16,7 +17,7 @@ async function register(req, res, next) {
 
     const user = userDoc.toObject();
     delete user.password;
-    return res.json({ code: 200, userDoc });
+    return sendOK(res, userDoc);
   } catch (e) {
     return next(e);
   }
@@ -29,7 +30,7 @@ async function login(req, res, next) {
 
     const user = userDoc.toObject();
     delete user.password;
-    return res.json({ code: 200, user });
+    return sendOK(res, user);
   } catch (e) {
     return next(e);
   }
@@ -55,7 +56,7 @@ async function getUser(req, res, next) {
     const userId = req.params.id;
 
     const userDoc = await userController.get(userId);
-    return res.json({ code: 200, userDoc });
+    return sendOK(res, userDoc);
   } catch (e) {
     return next(e);
   }
