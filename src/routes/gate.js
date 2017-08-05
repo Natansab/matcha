@@ -34,6 +34,17 @@ async function login(req, res, next) {
     return next(e);
   }
 }
+
+async function getUser(req, res, next) {
+  try {
+    const userId = req.params.id;
+
+    const userDoc = await userController.get(userId);
+    return res.json({ code: 200, userDoc });
+  } catch (e) {
+    return next(e);
+  }
+}
 /**
  * Interface
  */
@@ -41,4 +52,5 @@ async function login(req, res, next) {
 export default {
   register,
   login,
+  getUser,
 };

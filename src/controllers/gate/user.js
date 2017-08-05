@@ -37,10 +37,19 @@ async function register({ username, firstname, lastname, email, password }) {
   return user;
 }
 
+async function get(userId) {
+  const userDoc = await UserModel.findById(userId, 'username firstname lastname bio gender orientation interests');
+
+  if (!userDoc) throw new Error(`User id ${userId} incorrect`);
+
+  return userDoc;
+}
+
 /**
   * Interface
   */
 
 export default {
   register,
+  get,
 };
