@@ -88,6 +88,7 @@ async function completeProfile(req, res, next) {
     const {
       userId, gender, orientation,
       bio, interests, pictures, coordinates,
+      dob,
     } = validate({ ...req.params, ...req.body }, [
       { param: 'id', name: 'user_id', required: true },
       { param: 'gender', required: true },
@@ -96,6 +97,7 @@ async function completeProfile(req, res, next) {
       { param: 'interests', required: true },
       { param: 'pictures', required: true },
       { param: 'coordinates', required: true },
+      { param: 'dob', required: true },
     ]);
 
     if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
@@ -103,6 +105,7 @@ async function completeProfile(req, res, next) {
     const userDoc = await userController.complete({
       userId, gender, orientation, bio,
       interests, pictures, coordinates,
+      dob,
     });
 
     return sendOK(res, userDoc);

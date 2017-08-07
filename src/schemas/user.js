@@ -24,6 +24,7 @@ const UserSchema = new Schema({
   password: { type: String, required: true },
   email: { type: mongoose.SchemaTypes.Email, required: true },
   token: String,
+  dob: Date,
   bio: String,
   interest: Array,
   gender: { type: String, enum: gender },
