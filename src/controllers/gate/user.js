@@ -45,12 +45,16 @@ async function get(userId) {
   return userDoc;
 }
 
-async function complete({ userId, gender, orientation, bio, interests, pictures }) {
+async function complete({
+  userId, gender, orientation, bio,
+  interests, pictures, coordinates,
+}) {
   const userDoc = await UserModel.findById(userId, '-password -token');
 
   if (!userDoc) throw new Error(`User id ${userId} incorrect`);
 
-  Object.assign(userDoc, { gender, orientation, bio, interests, pictures });
+  const location = { coordinates };
+  Object.assign(userDoc, { gender, orientation, bio, interests, pictures, location });
   return userDoc.save();
 }
 
