@@ -28,7 +28,7 @@ const UserSchema = new Schema({
   interest: Array,
   gender: { type: String, enum: gender },
   orientation: { type: String, enum: orientation, default: 'bi' },
-  score: Number,
+  score: { type: Number, default: 0 },
   location: {
     coordinates: Array,
   },
