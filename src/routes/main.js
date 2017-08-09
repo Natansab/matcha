@@ -23,7 +23,7 @@ router.get('/v1/user/:id', gate.checkpoint, gate.getUser);
 router.post('/v1/user/:id/complete', gate.checkpoint, gate.completeProfile);
 
 // Search
-router.get('/v1/search', gate.checkpoint, search.filteredSearch);
+router.post('/v1/search', gate.checkpoint, search.filteredSearch);
 
 /**
  * Interface
