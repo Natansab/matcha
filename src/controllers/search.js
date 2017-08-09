@@ -20,7 +20,7 @@ async function filtered({
   const maxDob = moment().subtract(minAge, 'year');
 
   const userDocs = await UserModel.find({
-    dob: { $gt: new Date(minDob), $lt: new Date(maxDob) },
+    dob: { $gte: new Date(minDob), $lte: new Date(maxDob) },
     score: { $gte: minScore, $lte: maxScore },
   }, '-password -token -email');
 
