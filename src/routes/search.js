@@ -14,19 +14,19 @@ async function filteredSearch(req, res, next) {
   try {
     const {
       minAge, maxAge, minScore, maxScore,
-      // interests, location,
-    } = validate(req.query, [
+      interests,
+    } = validate(req.body, [
       { param: 'minage', name: 'minAge' },
       { param: 'maxage', name: 'maxAge' },
       { param: 'minscore', name: 'minScore' },
       { param: 'maxscore', name: 'maxScore' },
-      // { param: 'interests' },
+      { param: 'interests' },
       // { param: 'location' },
     ]);
 
     const userDocs = await searchController.filtered({
       minAge, maxAge, minScore, maxScore,
-      // interests, location,
+      interests,
     });
 
     return sendOK(res, userDocs);
