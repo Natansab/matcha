@@ -1,0 +1,36 @@
+/**
+ * Dependencies
+ */
+
+import moment from 'moment';
+/**
+ * Models
+ */
+
+import UserModel from '../schemas/user';
+
+/**
+ * Public
+ */
+
+async function filtered({
+  minAge, maxAge, minScore, maxScore,
+}) {
+  const minDob = moment().subtract(maxAge, 'year');
+  const maxDob = moment().subtract(minAge, 'year');
+
+  const userDocs = await UserModel.find({
+    dob: { $gt: new Date(minDob), $lt: new Date(maxDob) },
+    score: { $gte: minScore, $lte: maxScore },
+  }, '-password -token -email');
+
+  return userDocs;
+}
+
+/**
+ * Interface
+ */
+
+export default {
+  filtered,
+};
