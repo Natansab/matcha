@@ -31,7 +31,8 @@ async function register(req, res, next) {
 
     const user = userDoc.toObject();
     delete user.password;
-    return sendOK(res, userDoc);
+
+    return sendOK(res, user);
   } catch (e) {
     return next(e);
   }
