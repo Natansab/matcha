@@ -114,6 +114,18 @@ async function completeProfile(req, res, next) {
     return next(e);
   }
 }
+
+async function uploadPic(req, res, next) {
+  try {
+    console.log(require('util').inspect(req.file, { depth: null }));
+    const userDoc = await userController.uploadPic(req.file.path);
+
+    return sendOK(res, userDoc);
+  } catch (e) {
+    return next(e);
+  }
+}
+
 /**
  * Interface
  */
@@ -124,4 +136,5 @@ export default {
   checkpoint,
   getUser,
   completeProfile,
+  uploadPic,
 };

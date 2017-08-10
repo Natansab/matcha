@@ -3,6 +3,7 @@
  */
 
 import crypto from 'crypto';
+import fs from 'fs';
 import lo from 'lodash';
 import UserModel from '../../schemas/user';
 import { encryptPassword } from './auth';
@@ -59,6 +60,13 @@ async function complete({
   return userDoc.save();
 }
 
+async function uploadPic(photoPath) {
+  const userDoc = await UserModel.findOne({ username: 'nat' });
+  userDoc.profilePic.data = fs.readFileSync(photoPath);
+  userDoc.profilePic.contentType = 'image/png';
+  return userDoc.save();
+}
+
 /**
   * Interface
   */
@@ -67,4 +75,5 @@ export default {
   register,
   get,
   complete,
+  uploadPic,
 };
