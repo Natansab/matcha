@@ -117,7 +117,6 @@ async function completeProfile(req, res, next) {
 
 async function uploadPic(req, res, next) {
   try {
-    console.log(require('util').inspect(req.file, { depth: null }));
     const userDoc = await userController.uploadPic(req.file.path);
 
     return sendOK(res, userDoc);
