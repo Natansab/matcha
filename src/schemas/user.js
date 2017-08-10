@@ -11,7 +11,7 @@ import mongoose from '../lib/mongoose';
 
 const Schema = mongoose.Schema;
 const gender = 'male female'.split(' ');
-const orientation = 'straight homo bi'.split(' ');
+const orientation = 'straight homosexual bisexual'.split(' ');
 
 /**
  * Schema
