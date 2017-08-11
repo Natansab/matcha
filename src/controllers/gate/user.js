@@ -3,6 +3,7 @@
  */
 
 import crypto from 'crypto';
+import mongoose from 'mongoose';
 import lo from 'lodash';
 import UserModel from '../../schemas/user';
 import { encryptPassword } from './auth';
@@ -62,7 +63,23 @@ async function complete({
 async function uploadPic(userId, picPath, profilPic) {
   const userDoc = await UserModel.findById(userId, '-password -token');
 
+  if (!userDoc) throw new Error(`User id ${userId} incorrect`);
+
   userDoc.pictures.push({ picPath, profilPic });
+  return userDoc.save();
+}
+
+async function like(userId, relationId) {
+  const userDoc = await UserModel.findById(userId, '-password -token');
+
+  if (!userDoc) throw new Error(`User id ${userId} incorrect`);
+
+  if (!userDoc.likes) { userDoc.likes = []; }
+  if (userDoc.likes.findIndex(elem => elem.toString() === relationId) !== -1) {
+    throw new Error(`User ${userId} already liked ${relationId}`);
+  }
+
+  userDoc.likes.push(mongoose.Types.ObjectId(relationId));
   return userDoc.save();
 }
 
@@ -75,4 +92,5 @@ export default {
   get,
   complete,
   uploadPic,
+  like,
 };

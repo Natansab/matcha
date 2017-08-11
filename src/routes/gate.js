@@ -131,6 +131,21 @@ async function uploadPic(req, res, next) {
   }
 }
 
+async function like(req, res, next) {
+  try {
+    const { userId, relationId } = validate({ ...req.params, ...req.query }, [
+      { param: 'id', name: 'user_id', required: true },
+      { param: 'relation', name: 'relation_id', required: true },
+    ]);
+
+    const userDoc = await userController.like(userId, relationId);
+
+    return sendOK(res, userDoc);
+  } catch (e) {
+    return next(e);
+  }
+}
+
 /**
  * Interface
  */
@@ -142,4 +157,5 @@ export default {
   getUser,
   completeProfile,
   uploadPic,
+  like,
 };

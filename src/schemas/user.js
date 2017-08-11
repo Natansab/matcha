@@ -33,6 +33,7 @@ const UserSchema = new Schema({
   location: {
     coordinates: Array,
   },
+  likes: [],
   pictures: [{
     profilPic: Boolean,
     picPath: String,
