@@ -88,7 +88,7 @@ async function completeProfile(req, res, next) {
   try {
     const {
       userId, gender, orientation,
-      bio, interests, pictures, coordinates,
+      bio, interests, coordinates,
       dob,
     } = validate({ ...req.params, ...req.body }, [
       { param: 'id', name: 'user_id', required: true },
@@ -96,7 +96,6 @@ async function completeProfile(req, res, next) {
       { param: 'orientation', required: true },
       { param: 'bio', required: true },
       { param: 'interests', required: true },
-      { param: 'pictures', required: true },
       { param: 'coordinates', required: true },
       { param: 'dob', required: true },
     ]);
@@ -105,7 +104,7 @@ async function completeProfile(req, res, next) {
 
     const userDoc = await userController.complete({
       userId, gender, orientation, bio,
-      interests, pictures, coordinates,
+      interests, coordinates,
       dob,
     });
 
