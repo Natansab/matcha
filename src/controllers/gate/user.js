@@ -48,7 +48,7 @@ async function get(userId) {
 
 async function complete({
   userId, gender, orientation, bio,
-  interests, pictures, coordinates,
+  interests, coordinates,
   dob,
 }) {
   const userDoc = await UserModel.findById(userId, '-password -token');
@@ -56,7 +56,7 @@ async function complete({
   if (!userDoc) throw new Error(`User id ${userId} incorrect`);
 
   const location = { coordinates };
-  Object.assign(userDoc, { gender, orientation, bio, interests, pictures, location, dob: new Date(dob) });
+  Object.assign(userDoc, { gender, orientation, bio, interests, location, dob: new Date(dob) });
   return userDoc.save();
 }
 

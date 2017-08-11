@@ -13,9 +13,10 @@ import searchController from '../controllers/search';
 async function filteredSearch(req, res, next) {
   try {
     const {
-      minAge, maxAge, minScore, maxScore,
-      interests,
-    } = validate(req.body, [
+      userId, minAge, maxAge, minScore,
+      maxScore, interests,
+    } = validate({ ...req.params, ...req.body }, [
+      { param: 'id', name: 'user_id', required: true },
       { param: 'minage', name: 'minAge' },
       { param: 'maxage', name: 'maxAge' },
       { param: 'minscore', name: 'minScore' },
@@ -25,7 +26,7 @@ async function filteredSearch(req, res, next) {
     ]);
 
     const userDocs = await searchController.filtered({
-      minAge, maxAge, minScore, maxScore,
+      userId, minAge, maxAge, minScore, maxScore,
       interests,
     });
 
