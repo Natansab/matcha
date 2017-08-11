@@ -117,7 +117,13 @@ async function completeProfile(req, res, next) {
 
 async function uploadPic(req, res, next) {
   try {
-    const userDoc = await userController.uploadPic(req.file.path);
+    const { userId, picPath, profilPic } = validate({ ...req.params, ...req.file, ...req.body }, [
+      { param: 'id', name: 'user_id', required: true },
+      { param: 'path', name: 'pic_path', required: true },
+      { param: 'profil', name: 'profil_pic', required: true },
+    ]);
+
+    const userDoc = await userController.uploadPic(userId, picPath, profilPic);
 
     return sendOK(res, userDoc);
   } catch (e) {
