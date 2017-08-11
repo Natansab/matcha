@@ -60,10 +60,10 @@ async function complete({
   return userDoc.save();
 }
 
-async function uploadPic(photoPath) {
-  const userDoc = await UserModel.findOne({ username: 'nat' });
-  userDoc.profilePic.data = fs.readFileSync(photoPath);
-  userDoc.profilePic.contentType = 'image/png';
+async function uploadPic(userId, picPath, profilPic) {
+  const userDoc = await UserModel.findById(userId, '-password -token');
+
+  userDoc.pictures.push({ picPath, profilPic });
   return userDoc.save();
 }
 
