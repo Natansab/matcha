@@ -123,6 +123,9 @@ async function uploadPic(req, res, next) {
       { param: 'profil', name: 'profil_pic', required: true },
     ]);
 
+    if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
+
+
     const userDoc = await userController.uploadPic(userId, picPath, profilPic);
 
     return sendOK(res, userDoc);
@@ -138,6 +141,9 @@ async function like(req, res, next) {
       { param: 'relation', name: 'relation_id', required: true },
     ]);
 
+    if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
+
+
     const userDoc = await userController.like(userId, relationId);
 
     return sendOK(res, userDoc);
@@ -152,6 +158,8 @@ async function unlike(req, res, next) {
       { param: 'id', name: 'user_id', required: true },
       { param: 'relation', name: 'relation_id', required: true },
     ]);
+
+    if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
 
     const userDoc = await userController.unlike(userId, relationId);
 
