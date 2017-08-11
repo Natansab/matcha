@@ -40,7 +40,7 @@ router.post('/v1/user/:id/like', gate.checkpoint, gate.like);
 router.post('/v1/user/:id/unlike', gate.checkpoint, gate.unlike);
 
 // Search
-router.post('/v1/search', gate.checkpoint, search.filteredSearch);
+router.post('/v1/user/:id/search', gate.checkpoint, search.filteredSearch);
 
 /**
  * Interface
