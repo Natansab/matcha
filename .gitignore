@@ -37,4 +37,4 @@ dump.rdb
 .idea/
 
 # uploads
-./uploads/*
+uploads/*
