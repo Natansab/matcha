@@ -75,13 +75,29 @@ async function like(userId, relationId) {
   if (!userDoc) throw new Error(`User id ${userId} incorrect`);
 
   if (!userDoc.likes) { userDoc.likes = []; }
-  if (userDoc.likes.findIndex(elem => elem.toString() === relationId) !== -1) {
-    throw new Error(`User ${userId} already liked ${relationId}`);
+  if (userDoc.likes.indexOf(elem => elem.toString() === relationId) !== -1) {
+    throw new Error(`User ${userId} already liked user ${relationId}`);
   }
 
   userDoc.likes.push(mongoose.Types.ObjectId(relationId));
   return userDoc.save();
 }
+
+async function unlike(userId, relationId) {
+  const userDoc = await UserModel.findById(userId, '-password -token');
+
+  if (!userDoc) throw new Error(`User id ${userId} incorrect`);
+
+  if (!userDoc.likes || userDoc.likes.indexOf(mongoose.Types.ObjectId(relationId)) === -1) {
+    throw new Error(`User ${userId} does not like user ${relationId}`);
+  }
+
+  const index = userDoc.likes.indexOf(mongoose.Types.ObjectId(relationId));
+
+  userDoc.likes.splice(index, 1);
+  return userDoc.save();
+}
+
 
 /**
   * Interface
@@ -93,4 +109,5 @@ export default {
   complete,
   uploadPic,
   like,
+  unlike,
 };
