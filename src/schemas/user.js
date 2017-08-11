@@ -33,10 +33,11 @@ const UserSchema = new Schema({
   location: {
     coordinates: Array,
   },
-  profilePic: {
-    data: Buffer,
-    contentType: String,
-  },
+  pictures: [{
+    picPath: String,
+    profilPic: Boolean,
+    _id: 0,
+  }],
 },
 );
 
