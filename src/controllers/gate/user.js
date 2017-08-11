@@ -75,7 +75,7 @@ async function like(userId, relationId) {
   if (!userDoc) throw new Error(`User id ${userId} incorrect`);
 
   if (!userDoc.likes) { userDoc.likes = []; }
-  if (userDoc.likes.indexOf(elem => elem.toString() === relationId) !== -1) {
+  if (userDoc.likes.indexOf(mongoose.Types.ObjectId(relationId)) !== -1) {
     throw new Error(`User ${userId} already liked user ${relationId}`);
   }
 
