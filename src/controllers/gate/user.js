@@ -3,7 +3,6 @@
  */
 
 import crypto from 'crypto';
-import fs from 'fs';
 import lo from 'lodash';
 import UserModel from '../../schemas/user';
 import { encryptPassword } from './auth';
