@@ -34,8 +34,9 @@ const UserSchema = new Schema({
     coordinates: Array,
   },
   pictures: [{
-    picPath: String,
     profilPic: Boolean,
+    picPath: String,
+    display: { type: Boolean, default: true },
     _id: 0,
   }],
 },
