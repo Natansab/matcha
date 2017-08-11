@@ -30,9 +30,10 @@ async function filtered({
   minScore, maxScore, interests,
 }) {
   const genderArray = [['male'], ['female'], ['male', 'female']];
-  const userDoc = await UserModel.findById(userId, 'gender orientation');
+  const userDoc = await UserModel.findById(userId, '_id gender orientation');
 
   const query = {};
+  query._id = { $ne: userDoc._id };
   if (minAge && maxAge) {
     const minDob = moment().subtract(maxAge, 'year');
     const maxDob = moment().subtract(minAge, 'year');
