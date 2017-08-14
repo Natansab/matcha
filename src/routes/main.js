@@ -8,6 +8,7 @@ import multer from 'multer';
 import mime from 'mime';
 import gate from './gate';
 import search from './search';
+import extra from './extra';
 
 /**
  * Private
@@ -43,6 +44,9 @@ router.get('/v1/user/:id/block', gate.checkpoint, gate.block);
 
 // Search
 router.post('/v1/user/:id/search', gate.checkpoint, search.filteredSearch);
+
+// Function
+router.get('/v1/function/score', extra.refreshScore);
 
 /**
  * Interface
