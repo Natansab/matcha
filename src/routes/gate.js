@@ -168,6 +168,22 @@ async function unlike(req, res, next) {
   }
 }
 
+async function report(req, res, next) {
+  try {
+    const { userId, reportedId } = validate({ ...req.params, ...req.query }, [
+      { param: 'id', name: 'user_id', required: true },
+      { param: 'reported', name: 'reported_id', required: true },
+    ]);
+
+    if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
+
+    await userController.report(userId, reportedId);
+
+    return sendOK(res, 'OK');
+  } catch (e) {
+    return next(e);
+  }
+}
 /**
  * Interface
  */
@@ -181,4 +197,5 @@ export default {
   uploadPic,
   like,
   unlike,
+  report,
 };

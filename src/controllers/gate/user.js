@@ -5,6 +5,7 @@
 import crypto from 'crypto';
 import mongoose from 'mongoose';
 import lo from 'lodash';
+import nodemailer from 'nodemailer';
 import UserModel from '../../schemas/user';
 import { encryptPassword } from './auth';
 
@@ -98,6 +99,31 @@ async function unlike(userId, relationId) {
   return userDoc.save();
 }
 
+async function report(userId, reportedId) {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'nsabbah42@gmail.com',
+      pass: '*****',
+    },
+  });
+
+  const mailOptions = {
+    from: 'nsabbah42@gmail.com',
+    to: 'nsabbah42@gmail.com',
+    subject: 'New user reported',
+    text: `User ${reportedId} reported by user ${userId}`,
+  };
+
+  return transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      throw new Error(error);
+    } else {
+      return `Email sent: ${info.response}`;
+    }
+  });
+}
+
 
 /**
   * Interface
@@ -110,4 +136,5 @@ export default {
   uploadPic,
   like,
   unlike,
+  report,
 };
