@@ -31,10 +31,10 @@ async function filtered({
   userId, minAge, maxAge,
   minScore, maxScore, interests,
 }) {
-  const userDoc = await UserModel.findById(userId, '_id gender orientation');
+  const userDoc = await UserModel.findById(userId, '_id gender blocked orientation');
   const query = {};
 
-  query._id = { $ne: userDoc._id };
+  query._id = { $ne: userDoc._id, $nin: userDoc.blocked };
   if (minAge && maxAge) {
     const minDob = moment().subtract(maxAge, 'year');
     const maxDob = moment().subtract(minAge, 'year');
