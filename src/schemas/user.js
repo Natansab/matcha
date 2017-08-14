@@ -30,6 +30,7 @@ const UserSchema = new Schema({
   gender: { type: String, enum: gender },
   orientation: { type: String, enum: orientation, default: 'bisexual' },
   score: { type: Number, default: 0 },
+  blocked: Array,
   location: {
     coordinates: Array,
   },
