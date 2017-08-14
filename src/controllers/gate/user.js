@@ -124,6 +124,21 @@ async function report(userId, reportedId) {
   });
 }
 
+async function block(userId, blockedId) {
+  const userDoc = await UserModel.findById(userId, '-password -token');
+
+  if (!userDoc) throw new Error(`User id ${userId} incorrect`);
+
+  if (!userDoc.blocked) userDoc.blocked = [];
+  else if (userDoc.blocked.indexOf(mongoose.Types.ObjectId(blockedId)) !== -1) {
+    throw new Error(`User ${userId} already blocked user ${blockedId}`);
+  }
+
+  userDoc.blocked.push(mongoose.Types.ObjectId(blockedId));
+
+  return userDoc.save();
+}
+
 
 /**
   * Interface
@@ -137,4 +152,5 @@ export default {
   like,
   unlike,
   report,
+  block,
 };

@@ -185,6 +185,23 @@ async function report(req, res, next) {
   }
 }
 
+async function block(req, res, next) {
+  try {
+    const { userId, blockedId } = validate({ ...req.params, ...req.query }, [
+      { param: 'id', name: 'user_id', required: true },
+      { param: 'blocked', name: 'blocked_id', required: true },
+    ]);
+
+    if (!lo.get(req, 'auth.logged') || lo.get(req, 'auth.userId') !== userId) throw new Error('Wrong credentials');
+
+    const userDoc = await userController.block(userId, blockedId);
+
+    return sendOK(res, userDoc);
+  } catch (e) {
+    return next(e);
+  }
+}
+
 /**
  * Interface
  */
@@ -199,4 +216,5 @@ export default {
   like,
   unlike,
   report,
+  block,
 };

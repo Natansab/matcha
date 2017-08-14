@@ -39,6 +39,7 @@ router.post('/v1/user/:id/uploadpicture', gate.checkpoint, upload.single('pictur
 router.post('/v1/user/:id/like', gate.checkpoint, gate.like);
 router.post('/v1/user/:id/unlike', gate.checkpoint, gate.unlike);
 router.get('/v1/user/:id/report', gate.checkpoint, gate.report);
+router.get('/v1/user/:id/block', gate.checkpoint, gate.block);
 
 // Search
 router.post('/v1/user/:id/search', gate.checkpoint, search.filteredSearch);
