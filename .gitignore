@@ -38,3 +38,6 @@ dump.rdb
 
 # uploads
 uploads/*
+
+# DS files
+.DS_Store
