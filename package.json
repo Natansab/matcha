@@ -13,7 +13,9 @@
     "clean": "rm -rf dist",
     "compile": "cp -rf src dist && babel -d dist src",
     "build": "npm run clean && npm run compile",
-    "start": "babel-node src/index.js | bunyan",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "babel-node src/index.js | bunyan",
+    "client": "node start-client.js",
     "debug": "DEBUG=* npm start"
   },
   "dependencies": {
@@ -27,7 +29,7 @@
     "lodash": "^4.17.4",
     "mime": "^1.3.6",
     "moment": "^2.18.1",
-    "mongoose": "^4.11.5",
+    "mongoose": "^4.10.8",
     "mongoose-type-email": "^1.0.5",
     "morgan": "^1.8.2",
     "multer": "^1.3.0",
@@ -41,6 +43,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.16.0",
+    "concurrently": "^3.5.0",
     "eslint": "^3.13.1",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0"
