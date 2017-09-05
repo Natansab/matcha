@@ -2,7 +2,7 @@
   "name": "api",
   "version": "0.0.0",
   "description": "",
-  "author": "Ethan Sebban",
+  "author": "Natan Sabbah",
   "license": "",
   "main": "dist/index.js",
   "scripts": {
