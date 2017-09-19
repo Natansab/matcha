@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import Client from './Client';
+import Client from '../../Client';
+import TableRows from './TableRows';
+import SortableColumnHeader from './SortableColumnHeader';
 
 const defaultFilters = {
   minAge: 0,
@@ -12,12 +14,21 @@ export default class Search extends Component {
     super(props);
     this.search = this.search.bind(this);
     this.handleChange = this.handleChange.bind(this);
-
+    this.handleSort = this.handleSort.bind(this);
     this.state = {
       hello: 'hello',
       users: [],
       filters: defaultFilters,
+      sort: {},
     };
+  }
+
+  handleSort(column, dir) {
+    this.setState((prevState) => {
+      const sort = prevState.sort;
+      sort[column.toLowerCase()] = dir;
+      return ({ sort });
+    });
   }
 
   search() {
@@ -44,14 +55,7 @@ export default class Search extends Component {
     });
 
     const userRows = usersFiltered.map(user => (
-      <tr key={user._id}>
-        <td name="username">{user.username}</td>
-        <td name="firstname">{user.firstname}</td>
-        <td name="lastname">{user.lastname}</td>
-        <td name="gender">{user.gender}</td>
-        <td name="orientation">{user.orientation}</td>
-        <td name="age">{user.age}</td>
-      </tr>
+      <TableRows user={user}/>
     ));
     return (
       <div>
@@ -62,7 +66,6 @@ export default class Search extends Component {
           <input type='number' name='minAge' value={this.state.filters.minAge} />
           <input type='number' name='maxAge' value={this.state.filters.maxAge} />
         </form>
-        {/* {this.state.users} */}
         <table>
           <thead>
             <tr>
@@ -71,7 +74,12 @@ export default class Search extends Component {
               <th>Lastname</th>
               <th>Gender</th>
               <th>Orientation</th>
-              <th>Age</th>
+              <SortableColumnHeader
+                column='Age'
+                onSort={this.handleSort}
+                currentSort={this.state.sort}
+              />
+              <th>Interests</th>
             </tr>
           </thead>
           <tbody>
