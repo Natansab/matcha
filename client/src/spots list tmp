@@ -1,0 +1,201 @@
+name, medias, publishers, allstar, categories, city, filters
+Thierry Marx, 3, 2, 1, bakeries, Paris, Bakeries, Food
+L'Orée du Marais, 12, 2, 1, restaurants, Paris, Restaurants
+Small World Catering, 2, 2, 1, breakfast_brunch, Amsterdam, Breakfast & Brunch, Restaurants
+Momoya, 1, 1, 0, sushi, japanese, salad, New York, Sushi Bars, Restaurants, Japanese, Restaurants, Salad, Restaurants
+Dean & DeLuca, 1, 1, 0, gourmet, grocery, New York, Specialty Food, Food, Grocery, Food
+Momofuku Noodle Bar, 2, 2, 1, ramen, newamerican, New York, Ramen, Japanese, Restaurants, American (New), Restaurants
+Best Pizza, 1, 1, 0, pizza, Brooklyn, Pizza, Restaurants
+Peter Luger, 2, 2, 1, steak, desserts, seafood, Brooklyn, Steakhouses, Restaurants, Desserts, Food, Seafood, Restaurants
+The Broken Arm, 18, 3, 2, cafes, concept_shops, Paris,
+Aï Hsu, 5, 3, 1, japanese, taiwanese, Paris, Japanese, Restaurants, Taiwanese, Restaurants
+Amici Miei, 4, 3, 1, italian, pizza, Paris, Italian, Restaurants, Pizza, Restaurants
+Pierre Sang, 8, 3, 1, french, bistros, panasian, Paris, French, Restaurants, Bistros, Restaurants, Pan Asian, Restaurants
+Le boeuf volant, 2, 1, 0, steak, french, burgers, Paris, Steakhouses, Restaurants, French, Restaurants, Burgers, Restaurants
+Pizzeria Brandi, 1, 1, 0, pizza, cucinacampana, Naples, Pizza, Restaurants, Cucina campana, Italian, Restaurants
+La Cevicheria, 2, 1, 0, seafood, latin, peruvian, Paris, Seafood, Restaurants, Latin American, Restaurants, Peruvian, Restaurants
+Caffe' Positano, 6, 1, 0, italian, Positano, Italian, Restaurants
+Grom, 1, 1, 0, icecream, Paris, Ice Cream & Frozen Yogurt, Food
+Causses, 1, 1, 0, grocery, convenience, sandwiches, Paris, Grocery, Food, Convenience Stores, Food, Sandwiches, Restaurants
+Cantine California, 10, 2, 1, tex-mex, burgers, tradamerican, Paris, Tex-Mex, Restaurants, Burgers, Restaurants, American (Traditional), Restaurants
+Robert et Louise, 1, 1, 0, french, steak, Paris, French, Restaurants, Steakhouses, Restaurants
+Blueberry, 4, 3, 1, japanese, Paris, Japanese, Restaurants
+Rice and Fish, 3, 2, 1, japanese, Paris, Japanese, Restaurants
+Porte 12, 8, 2, 1, french, Paris, French, Restaurants
+Cova sa Nacra, 1, 1, 0, seafood, Ciudadela, Seafood, Restaurants
+Paperboy, 13, 3, 2, breakfast_brunch, burgers, tradamerican, Paris, Breakfast & Brunch, Restaurants, Burgers, Restaurants, American (Traditional), Restaurants
+Ulisses, 1, 1, 0, tapas, bars, Ciudadela de Menorca,
+Balagan, 2, 1, 0, mideastern, cocktailbars, Paris,
+Le Pigalle, 3, 2, 1, hotels, bars, french, Paris, French, Restaurants
+Mamma Primi, 11, 3, 1, italian, Paris, Italian, Restaurants
+Ginger Sapori e Salute, 1, 1, 0, juicebars, italian, organic_stores, Rome, Juice Bars & Smoothies, Food, Italian, Restaurants, Organic Stores, Food
+Toraya, 3, 2, 1, bakeries, tea, Paris, Bakeries, Food, Tea Rooms, Food
+Le Petit Cambodge, 16, 4, 3, cambodian, panasian, Paris, Cambodian, Restaurants, Pan Asian, Restaurants
+Café George V, 1, 1, 0, brasseries, cafes, tea, Paris, Brasseries, Restaurants, Cafes, Restaurants, Tea Rooms, Food
+Terroni, 4, 1, 0, italian, Toronto, Italian, Restaurants
+Marzo, 7, 2, 0, pizza, italian, Paris, Pizza, Restaurants, Italian, Restaurants
+Le Water Bar Colette, 3, 2, 1, french, Paris, French, Restaurants
+Coffee Spoune, 4, 2, 1, coffee, cakeshop, breakfast_brunch, Paris, Coffee & Tea, Food, Patisserie/Cake Shop, Food, Breakfast & Brunch, Restaurants
+Bagnard, 2, 2, 1, sandwiches, Paris, Sandwiches, Restaurants
+Le Petit Lutetia, 4, 2, 0, french, PARIS, French, Restaurants
+Compagnie Des Vins Surnaturels, 2, 1, 0, wine_bars, tapas, Paris, Tapas Bars, Restaurants
+Blend, 5, 3, 2, burgers, Paris, Burgers, Restaurants
+Kodawari Ramen, 1, 1, 0, ramen, Paris, Ramen, Japanese, Restaurants
+L'Avant Comptoir du Marché, 3, 3, 2, tapas, Paris, Tapas Bars, Restaurants
+Biglove Caffè, 11, 3, 1, italian, breakfast_brunch, Paris, Italian, Restaurants, Breakfast & Brunch, Restaurants
+Bene Kitchen, 3, 1, 0, italian, Paris, Italian, Restaurants
+Canton Saint Germain Le, 2, 2, 1, restaurants, Paris, Restaurants
+L'Inattendu, 3, 1, 0, french, Lyon, French, Restaurants
+De Foodhallen, 2, 1, 0, foodstands, Amsterdam, Food Stands, Restaurants
+Angelina, 2, 2, 1, tea, bakeries, Paris, Tea Rooms, Food, Bakeries, Food
+Tomy and Co, 5, 2, 0, bistros, Paris, Bistros, Restaurants
+Little Collins, 1, 1, 0, breakfast_brunch, diners, bars, Amsterdam,
+Dolcetto & Co, 1, 1, 0, italian, Montreal, Italian, Restaurants
+Venice MTL, 1, 1, 0, salad, juicebars, Montreal, Salad, Restaurants, Juice Bars & Smoothies, Food
+L'Ourson qui Boit, 1, 1, 0, french, japanese, Lyon, French, Restaurants, Japanese, Restaurants
+Aux Prés, 10, 3, 1, bistros, french, Paris, Bistros, Restaurants, French, Restaurants
+Le Barricou, 1, 1, 0, breakfast_brunch, french, bars, Brooklyn,
+Jean Hwang Carrant, 4, 2, 1, desserts, cakeshop, Paris, Desserts, Food, Patisserie/Cake Shop, Food
+Wild & The Moon, 6, 2, 1, juicebars, gluten_free, Paris, Juice Bars & Smoothies, Food, Gluten-Free, Restaurants
+Bespoke, 3, 2, 1, cocktailbars, tradamerican, Paris, American (Traditional), Restaurants
+Le Roch, 2, 2, 0, hotels, Paris,
+Freddy's, 6, 2, 1, tapas, french, steak, Paris, Tapas Bars, Restaurants, French, Restaurants, Steakhouses, Restaurants
+Nanashi, 4, 3, 2, modern_european, breakfast_brunch, japanese, Paris, Modern European, Restaurants, Breakfast & Brunch, Restaurants, Japanese, Restaurants
+Dominique Bucaille, 3, 1, 0, french, Manosque, French, Restaurants
+Pierre Sang on Gambey, 5, 3, 2, modern_european, french, Paris, Modern European, Restaurants, French, Restaurants
+Maria Luisa, 3, 2, 1, italian, pizza, Paris, Italian, Restaurants, Pizza, Restaurants
+Botanique, 4, 2, 1, french, modern_european, Paris, French, Restaurants, Modern European, Restaurants
+Le Pavillon des Canaux, 1, 1, 0, bars, cafes, modern_european, Paris, Cafes, Restaurants, Modern European, Restaurants
+Marylebone Farmers' Market, 1, 1, 0, farmersmarket, London, Farmers Market, Food
+Lyle's, 17, 2, 1, british, London, British, Restaurants
+Blanchette, 2, 1, 0, bistros, french, London, Bistros, Restaurants, French, Restaurants
+Nobu Berkeley St, 3, 1, 0, japanese, sushi, London, Japanese, Restaurants, Sushi Bars, Restaurants
+Fich, 1, 1, 0, fishnchips, burgers, Paris, Fish & Chips, Restaurants, Burgers, Restaurants
+Chiltern Firehouse, 11, 2, 1, modern_european, french, british, London, Modern European, Restaurants, French, Restaurants, British, Restaurants
+Honey & Co, 5, 2, 1, mideastern, London, Middle Eastern, Restaurants
+Daylesford Organic, 2, 1, 0, british, breakfast_brunch, organic_stores, London, British, Restaurants, Breakfast & Brunch, Restaurants, Organic Stores, Food
+Briki, 1, 1, 0, cafes, London, Cafes, Restaurants
+Hôtel Bachaumont, 1, 1, 0, hotels, Paris,
+Eric Kayser, 1, 1, 0, bakeries, sandwiches, salad, Paris, Bakeries, Food, Sandwiches, Restaurants, Salad, Restaurants
+Le Loir dans la Théière, 1, 1, 0, tea, french, desserts, Paris, Tea Rooms, Food, French, Restaurants, Desserts, Food
+Bourne & Hollingsworth Buildings, 1, 1, 0, bars, british, cafes, London, British, Restaurants, Cafes, Restaurants
+Foxcroft & Ginger, 1, 1, 0, british, bakeries, desserts, London, British, Restaurants, Bakeries, Food, Desserts, Food
+Bar de la Croix Rouge, 1, 1, 0, brasseries, Paris, Brasseries, Restaurants
+The Riding House Café, 2, 1, 0, british, bars, London,
+Le Petit Marché, 1, 1, 0, french, Paris, French, Restaurants
+Kurobuta Chelsea Pop-Up, 4, 1, 0, japanese, London, Japanese, Restaurants
+Maze Grill, 1, 1, 0, steak, british, London, Steakhouses, Restaurants, British, Restaurants
+Apicius, 1, 1, 0, gourmet, Paris, Specialty Food, Food
+La Belle Epoque, 2, 2, 1, bars, french, Paris, French, Restaurants
+Le Burger Fermier des Enfants Rouges, 1, 1, 0, burgers, Le Touquet-Paris-Plage, Burgers, Restaurants
+Le Petit Italien, 1, 1, 0, italian, Paris, Italian, Restaurants
+Folks and Sparrows, 4, 3, 2, sandwiches, coffee, Paris, Sandwiches, Restaurants, Coffee & Tea, Food
+Scoop Me a Cookie, 1, 1, 0, desserts, bakeries, Paris, Desserts, Food, Bakeries, Food
+Used Book Café, 4, 3, 2, coffee, Paris, Coffee & Tea, Food
+Aux Deux Amis, 14, 3, 2, bistros, bars, tapasmallplates, Paris, Tapas/Small Plates, Restaurants
+Ma Cocotte, 3, 2, 1, french, Saint-Ouen, French, Restaurants
+Dupain, 2, 2, 1, bakeries, Paris, Bakeries, Food
+Kraft Hot-Dog, 2, 2, 1, hotdog, Paris, Hot Dogs, Restaurants
+Blackbird Baking, 1, 1, 0, bakeries, Toronto, Bakeries, Food
+The Burger's Priest, 1, 1, 0, burgers, Toronto, Burgers, Restaurants
+Olive & Gourmando, 1, 1, 0, sandwiches, breakfast_brunch, Montreal, Sandwiches, Restaurants, Breakfast & Brunch, Restaurants
+The Lobster Place, 1, 1, 0, seafoodmarkets, seafood, New York, Seafood Markets, Specialty Food, Food, Seafood, Restaurants
+Hotel Royal Monceau, 2, 2, 0, hotels, Paris,
+The Chase Fish & Oyster, 2, 1, 0, seafood, newcanadian, breakfast_brunch, Toronto, Seafood, Restaurants, Canadian (New), Restaurants, Breakfast & Brunch, Restaurants
+Le Relais de l'Entrecôte, 1, 1, 0, french, Paris, French, Restaurants
+East Mamma, 15, 3, 2, pizza, trattorie, Paris, Pizza, Restaurants, Trattorie, Restaurants
+Buca, 2, 1, 0, italian, Toronto, Italian, Restaurants
+La Pulperia, 2, 2, 1, argentine, bbq, latin, Paris, Argentine, Restaurants, Barbeque, Restaurants, Latin American, Restaurants
+Grazie, 4, 2, 1, pizza, cocktailbars, Paris,
+Au Pot de Vin, 1, 1, 0, wine_bars, Cannes,
+58 Tour Eiffel, 5, 2, 1, french, Paris, French, Restaurants
+Zia Paris, 1, 1, 0, cafes, breakfast_brunch, Paris, Cafes, Restaurants, Breakfast & Brunch, Restaurants
+Rimal, 1, 1, 1, lebanese, Paris, Lebanese, Middle Eastern, Restaurants
+Café Méricourt, 3, 3, 2, breakfast_brunch, Paris, Breakfast & Brunch, Restaurants
+L de Liza, 9, 3, 3, bakeries, Paris, Bakeries, Food
+Griffon Fromager Affineur, 1, 1, 0, cheese, Paris, Cheese Shops, Specialty Food, Food
+Le 116, 1, 1, 0, japanese, bistros, Paris, Japanese, Restaurants, Bistros, Restaurants
+Martine Lambert, 1, 1, 0, icecream, desserts, Paris, Ice Cream & Frozen Yogurt, Food, Desserts, Food
+Mori Yoshida, 11, 2, 1, desserts, bakeries, chocolate, Paris, Desserts, Food, Bakeries, Food, Chocolatiers & Shops, Specialty Food, Food
+Le Pain Quotidien, 1, 1, 1, breakfast_brunch, belgian, Paris, Breakfast & Brunch, Restaurants, Belgian, Restaurants
+Le Marché de Saint Rémy de Provence, 1, 1, 1, farmersmarket, Saint-Rémy-de-Provence, Farmers Market, Food
+La Pâtisserie Cyril Lignac, 4, 2, 1, bakeries, Paris, Bakeries, Food
+Le Bon Saint Pourçain, 4, 2, 1, french, Paris, French, Restaurants
+Pacchio, 3, 1, 0, italian, Paris, Italian, Restaurants
+Wynwood Paris, 3, 1, 0, cafes, Paris, Cafes, Restaurants
+Monsieur K, 5, 2, 1, thai, hotdogs, panasian, Paris, Thai, Restaurants, Fast Food, Restaurants, Pan Asian, Restaurants
+House of 3 Brothers, 1, 1, 0, cakeshop, Paris, Patisserie/Cake Shop, Food
+Quinsou, 5, 3, 2, french, Paris, French, Restaurants
+Les Princes, 1, 1, 0, french, breakfast_brunch, wine_bars, Paris,
+Marcel, 2, 1, 0, tradamerican, breakfast_brunch, british, Paris, American (Traditional), Restaurants, Breakfast & Brunch, Restaurants, British, Restaurants
+Les Résistants, 1, 1, 0, french, Paris, French, Restaurants
+Les Choupettes de Chouchou, 1, 1, 0, cakeshop, Paris, Patisserie/Cake Shop, Food
+Acide, 3, 2, 1, tea, bakeries, Paris, Tea Rooms, Food, Bakeries, Food
+Plume, 4, 2, 1, bistros, french, Paris, Bistros, Restaurants, French, Restaurants
+Grand Amour Hôtel, 12, 4, 3, hotels, french, breakfast_brunch, Paris, French, Restaurants, Breakfast & Brunch, Restaurants
+Borgo di Borgo delle Tovaglie, 2, 1, 1, italian, Paris, Italian, Restaurants
+Number Sixteen Hotel, 1, 1, 0, hotels, London,
+Bontemps, 9, 3, 2, cakeshop, Paris, Patisserie/Cake Shop, Food
+Clover Grill, 6, 2, 1, bbq, french, Paris, Barbeque, Restaurants, French, Restaurants
+Sushi B, 5, 3, 2, sushi, japanese, Paris, Sushi Bars, Restaurants, Japanese, Restaurants
+Bistro Paradis, 1, 1, 0, bistros, french, Paris, Bistros, Restaurants, French, Restaurants
+Mamou, 1, 1, 0, french, Paris 09, French, Restaurants
+La Goutte d'Or, 3, 2, 1, cakeshop, Paris, Patisserie/Cake Shop, Food
+Pizzeria Popolare, 6, 2, 2, pizza, napoletana, Paris, Pizza, Restaurants, Napoletana, Italian, Restaurants
+Merguez & Pastrami, 4, 2, 2, bars, mediterranean, Paris, Mediterranean, Restaurants
+Le Cinq, 2, 1, 1, french, breakfast_brunch, Paris, French, Restaurants, Breakfast & Brunch, Restaurants
+Brasserie Réjane, 2, 2, 1, french, Paris, French, Restaurants
+Goût de Brioche, 2, 2, 1, desserts, Paris, Desserts, Food
+Aux Plumes, 1, 1, 0, french, wine_bars, Paris,
+La Perle, 3, 1, 1, coffee, bars, cafes, Paris, Cafes, Restaurants
+Atari Gastroteka, 1, 1, 0, spanish, Donostia / San Sebastián, Spanish, Restaurants
+Bistró Guggenheim, 1, 1, 0, spanish, Bilbao, Spanish, Restaurants
+Sébastien Gaudard, 6, 2, 1, bakeries, desserts, Paris, Bakeries, Food, Desserts, Food
+Au Petit Creux Montmartre, 12, 1, 1, creperies, sandwiches, Paris, Creperies, Restaurants, Sandwiches, Restaurants
+Le Surfing, 1, 1, 0, french, Biarritz, French, Restaurants
+Le Poinçon, 1, 1, 0, french, spanish, tapas, Guéthary, French, Restaurants, Spanish, Restaurants, Tapas Bars, Restaurants
+Ciampini Bistrot, 1, 1, 0, wine_bars, bistros, pizza, Rome, Bistros, Restaurants, Pizza, Restaurants
+Hotel Piazza do Spagna, 1, 1, 0, hotels, Rome,
+Café Grande Plage, 1, 1, 0, french, cafes, coffee, Biarritz, French, Restaurants, Cafes, Restaurants, Coffee & Tea, Food
+L'Office, 2, 2, 2, french, wine_bars, Paris,
+O Coffeeshop, 3, 2, 2, cafes, breakfast_brunch, Paris, Cafes, Restaurants, Breakfast & Brunch, Restaurants
+La Réserve, 2, 1, 1, hotels, Paris,
+Melt, 4, 2, 2, steak, bbq, Paris, Steakhouses, Restaurants, Barbeque, Restaurants
+Tribute Portfolio, 4, 1, 1, hotels, Paris,
+Le Pré d'Ici, 1, 1, 1, french, Paris, French, Restaurants
+Abri Soba, 16, 3, 2, ramen, Paris, Ramen, Japanese, Restaurants
+Mathis, 1, 1, 0, french, Paris, French, Restaurants
+Lemongrass Gelato, 1, 1, 0, desserts, gelato, icecream, Rome, Desserts, Food, Gelato, Food, Ice Cream & Frozen Yogurt, Food
+Jaïs, 2, 1, 0, french, Paris, French, Restaurants
+Jouvence, 7, 3, 3, french, Paris, French, Restaurants
+Polpo, 1, 1, 1, seafood, brasseries, Levallois-Perret, Seafood, Restaurants, Brasseries, Restaurants
+13-a Baker's Dozen, 2, 2, 1, cafes, tradamerican, Paris, Cafes, Restaurants, American (Traditional), Restaurants
+La Société, 1, 1, 0, french, Paris, French, Restaurants
+Boneshaker Doughnuts, 5, 2, 1, donuts, Paris, Donuts, Food
+Les Poulettes Batignolles, 4, 1, 0, french, Paris, French, Restaurants
+Marie-Anne Cantin, 1, 1, 0, cheese, Paris, Cheese Shops, Specialty Food, Food
+Galliká, 1, 1, 0, greek, mediterranean, Paris, Greek, Restaurants, Mediterranean, Restaurants
+Café de l'Homme, 1, 1, 0, french, cafes, Paris, French, Restaurants, Cafes, Restaurants
+Holiday Café, 2, 2, 1, cafes, breakfast_brunch, french, Paris, Cafes, Restaurants, Breakfast & Brunch, Restaurants, French, Restaurants
+Cafe Moco, 5, 2, 2, cafes, Paris, Cafes, Restaurants
+Grand Pigalle Hotel, 10, 2, 2, hotels, Paris,
+Les Deux Magots, 1, 1, 0, cafes, Paris, Cafes, Restaurants
+Honor, 5, 3, 2, coffee, Paris, Coffee & Tea, Food
+Café de Flore, 2, 1, 1, cafes, Paris, Cafes, Restaurants
+La Maison du Chocolat, 1, 1, 1, chocolate, Paris, Chocolatiers & Shops, Specialty Food, Food
+Aloha Café, 1, 1, 0, cafes, breakfast_brunch, salad, Paris, Cafes, Restaurants, Breakfast & Brunch, Restaurants, Salad, Restaurants
+Maora Beach, 1, 1, 0, french, beachbars, Bonifacio,
+Republique of Coffee, 1, 1, 1, coffee, breakfast_brunch, Paris, Coffee & Tea, Food, Breakfast & Brunch, Restaurants
+Bonhomie, 3, 2, 2, cocktailbars, mediterranean, Paris, Mediterranean, Restaurants
+Hôtel Relais Montmartre Paris, 2, 1, 1, hotels, bedbreakfast, Paris,
+The Good Life Eatery, 1, 1, 0, breakfast_brunch, vegetarian, London, Breakfast & Brunch, Restaurants, Vegetarian, Restaurants
+Paris Texas, 3, 2, 2, tradamerican, bbq, Paris, American (Traditional), Restaurants, Barbeque, Restaurants
+Angelina, 1, 1, 1, cakeshop, tea, Paris, Patisserie/Cake Shop, Food, Tea Rooms, Food
+Sloane Square Hotel, 1, 1, 0, hotels, London,
+Hôtel Raphaël, 1, 1, 1, hotels, Paris,
+Le Pavillon de la Reine, 1, 1, 1, hotels, Paris,
+Rachel's Grocery, 1, 1, 1, delicatessen, Paris, Delicatessen, Food
+Café Faubourg, 2, 1, 1, cafes, coffee, Paris, Cafes, Restaurants, Coffee & Tea, Food
+Pain Pain, 4, 2, 2, bakeries, Paris, Bakeries, Food
+Hôtel Lancaster, 1, 1, 1, hotels, restaurants, Paris, Restaurants
+Chipotle Mexican Grill, 1, 1, 1, mexican, hotdogs, Paris, Mexican, Restaurants, Fast Food, Restaurants
